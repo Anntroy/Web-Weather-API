@@ -1,6 +1,6 @@
 var form = new FormData();
 var settings = {
-    "url": "http://api.openweathermap.org/data/2.5/find?q=London&units=metric&appid=6e2d128b93c24dad81aa2c3bb912b429",
+    "url": link,
     "method": "GET",
     "timeout": 0,
     "processData": false,
@@ -24,45 +24,46 @@ $.ajax(settings).done(function (response) {
     chooseWeatherIcon(weatherIcon);
 });
 
+
 function chooseWeatherIcon(icon){
     switch (icon) {
         case '01d':
             $('#weatherIcon').addClass('pe-7w-sun');
-            console.log($('#weatherIcon'))
+            $('.body').css('background-image', "url('images/clear.jpg')");
             break;
         case '02d':
             $('#weatherIcon').addClass('pe-7w-cloud-sun');
-            console.log($('#weatherIcon'))
+            $('.body').css('background-image', "url('images/few_clouds.jpg')");
             break;
         case '03d':
             $('#weatherIcon').addClass('pe-7w-cloud');
-            console.log($('#weatherIcon'))
+            $('.body').css('background-image', "url('images/cloudy.jpg')");
             break;
         case '04d':
             $('#weatherIcon').addClass('pe-7w-cloud-wind');
-            console.log($('#weatherIcon'))
+            $('.body').css('background-image', "url('images/cloudy.jpg')");
             break;
         case '09d':
             $('#weatherIcon').addClass('pe-7w-drizzle-alt');
-            console.log($('#weatherIcon'))
+            $('.body').css('background-image', "url('images/rainy.jpg')");
             break;
         case '10d':
             $('#weatherIcon').addClass('pe-7w-drizzle-alt-sun');
-            console.log($('#weatherIcon'))
+            $('.body').css('background-image', "url('images/rainy.jpg')");
         break;
         case '11d':
             $('#weatherIcon').addClass('pe-7w-lightning');
-            console.log($('#weatherIcon'))
+            $('.body').css('background-image', "url('images/storm.jpg')");
         break;
         case '13d':
             $('#weatherIcon').addClass('pe-7w-snow-alt');
-            console.log($('#weatherIcon'))
+            $('.body').css('background-image', "url('images/cloudy.jpg')");
         break;
         case '50d':
             $('#weatherIcon').addClass('pe-7w-fog');
-            console.log($('#weatherIcon'))
+            $('.body').css('background-image', "url('images/cloudy.jpg')");
         break;
         default:
-            console.log($('#weatherIcon'))
+            $('.body').css('background-image', "url('images/clear.jpg')");
     }
 }

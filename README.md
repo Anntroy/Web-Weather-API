@@ -1,5 +1,5 @@
 # Web & Weather API
-> Here goes your awesome project description!
+> This project shows you time and weather in the city you choose!
 
 ## Table of contents
 * [General info](#general-info)
@@ -12,38 +12,36 @@
 * [Contact](#contact)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+This project is to improve our knowladge using third party APIs.
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 
 ## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* Html
+* CSS
+* Jquery
 
 ## Setup
 Describe how to install / setup your local environement / add link to demo version.
 
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
-
 ## Features
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* Shows you currand day and time
+* Shows weather parameters like temperature, humidity, sunset time, etc.
+* Includes search motor to get information about 1000 cities all over the world
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Background changes depending on the weather
+* Icon changes depending on the weather
+* First-mobile design
+
 
 ## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+Project is: _in progress_
 
 ## Inspiration
-This project inspired by OpenWeather website.
+This project is based on the API data from OpenWeather.
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by [@CristinaBulnes](https://github.com/CristinaBulnes) and [@Anntroy](https://github.com/Anntroy) - feel free to contact us!
