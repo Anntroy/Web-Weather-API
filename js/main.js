@@ -16,8 +16,6 @@ $.ajax(settings).done(function (response) {
     let weatherDescription = (JSON.parse(response).list)[0].weather[0].description;
     let weatherIcon = (JSON.parse(response).list)[0].weather[0].icon;
 
-    // console.log(typeof (JSON.parse(response).list)[0].weather[0].id)
-
     $('#cloudyData').text(`${cloudData}%`);
     $('#windyData').text(`${windData}`);
     $('#humidityData ').text(`${humidityData}%`);
