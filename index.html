@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web & Weather API</title>
     <link rel="stylesheet" href="main.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="reset.css">
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-=======
     <link rel="stylesheet" href="css/pe-icon-7-weather/css/pe-icon-7-weather.css">
->>>>>>> e4402e2457ce6cdc25193febc7a6be368a5c0c93
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
 <body>
     <main>
@@ -30,12 +29,16 @@
             </article>
         </section>
         <section class="container containerMain">
-            <article class="containerCurrentTime">
+            <article class="containerInfo containerCurrentTime">
                 <p class="currentWeekDay"></p>
                 <p class="currentDate"></p>
                 <p class="currentHour"></p>
             </article>
-            <article class="containerTemperature">
+            <article class="containerInfo containerSunsetSunrise">
+                <p class="itemSunsetSunrise sunriseTime"><span class="iconify" data-icon="wi-sunrise" data-inline="false"></span>08:32</p>
+                <p class="itemSunsetSunrise sunsetTime"><span class="iconify" data-icon="wi-sunset" data-inline="false"></span>18:32</p>
+            </article>
+            <article class="containerInfo containerTemperature">
                 <div class="containerLeft">
                     <p class="currentTempData">10</p>
                 </div>
@@ -44,12 +47,12 @@
                         <p class="currentTempUnit">ºC</p>
                     </div>
                     <div class="containerMaxMinTemp">
-                        <p class="maxTemp">Max T</p>
-                        <p class="minTemp">Min T</p>
+                        <p class="maxTemp"><i class="fas fa-long-arrow-alt-up"></i>Max T</p>
+                        <p class="minTemp"><i class='fas fa-long-arrow-alt-down'></i>Min T</p>
                     </div>
                 </div>
             </article>
-            <article class="containerCity">
+            <article class="containerInfo containerCity">
                 <h2 class="cityName">City</h2>
             </article>
         </section>
@@ -57,13 +60,13 @@
             <p class="weatherDescription"></p>
             <figure id="weatherIcon"></figure>
         </section>
-        <section class="container searched">
-            <label for="citySearch">City cityName</label>
+        <section class="containerSearched">
+            <!-- <label for="citySearch">City cityName</label> -->
             <input type="text" id="citySearch" placeholder="Weather in your city...">
-            <button class="btn btn-search">Search</button>
-            <ul id="myCities">
+            <button class="btn btn-search"><i class='fas fa-search'></i></button>
+            <!-- <ul id="myCities">
                 <li></li>
-            </ul>
+            </ul> -->
         </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -11,14 +11,23 @@ $("document").ready(function() {
                 console.log(response)
                 $(".currentTempData").text(Math.round(response.main.temp));
                 $(".minTemp").text(Math.round(response.main.temp_min) + "º");
+                $(".minTemp").prepend(`<i class="fas fa-long-arrow-alt-down"></i>`)
                 $(".maxTemp").text(Math.round(response.main.temp_max) + "º");
+                $(".maxTemp").prepend(`<i class="fas fa-long-arrow-alt-up"></i>`)
                 $(".cityName").text(response.name + ", " + response.sys.country);
                 let weekDay = getWeekDay (response.dt);
                 let date = getDate (response.dt);
-                let hour = getHour (response.dt, response.timezone);
+                let hour = getHour (response.dt);
                 $(".currentWeekDay").text(weekDay)
                 $(".currentDate").text(date);
-                $(".currentHour").text(hour)
+                $(".currentHour").text(hour);
+
+                let sunriseTime = getHour(response.sys.sunrise);
+                let sunsetTime = getHour(response.sys.sunset);
+                $(".sunriseTime").text(sunriseTime);
+                $(".sunsetTime").text(sunsetTime);
+                $(".sunriseTime").prepend(`<span class="iconify" data-icon="wi-sunrise" data-inline="false">`);
+                $(".sunsetTime").prepend(`<span class="iconify" data-icon="wi-sunset" data-inline="false">`);
             }
             /* error : function(xhr, status) {
                 alert('Disculpe, existió un problema');
@@ -63,14 +72,22 @@ function getDate (unix, timezone) {
     return myDate;
 }
 
-function getHour (unix, timezone) {
+/* function getHour (unix, timezone) {
         // create Date object for current location
         var date = new Date(unix*1000 + timezone*1000);
         var hour = date.getHours();
         var minutes = date.getMinutes();
-        minutes = 60 - minutes;
+        //minutes = 60 - minutes;
         console.log(hour);
         console.log(minutes);
         var myTime = hour + ":" + minutes;
         return myTime;
+} */
+
+function getHour (unix) {
+    var date = new Date(unix*1000);
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var time = hour + ":" + minute
+    return time;
 }

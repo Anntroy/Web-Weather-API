@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 html, body {
     width: 100%;
     height: 100%;
@@ -6,10 +5,23 @@ html, body {
 * {
     box-sizing: border-box;
 }
-.containerHeader {
-    width: 100%;
-    height: 200px;
-    background-color: blue;
+
+.containerMain {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerInfo {
+    margin-top: 10px;
+}
+
+.containerSunsetSunrise {
+    display: flex;
+    justify-content: center;
+}
+
+.itemSunsetSunrise {
+    padding: 5px;
 }
 
 .containerCurrentTime {
@@ -22,7 +34,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: burlywood;
     padding: 20px 0px;
 }
 
@@ -30,22 +41,23 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5em;
+    font-size: 7em;
     font-weight: 900;
-    background-color: cadetblue;
 }
 .containerRight {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: coral;
     font-size: 1.5em;
 }
 .containerCurrentTempUnit{
-    background-color: crimson;
+    font-weight: 900;
+    padding: 5px;
+    margin-top: 10px;
 }
 .containerMaxMinTemp {
-    background-color: cyan;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 .containerCity {
     display: flex;
@@ -53,9 +65,12 @@ html, body {
     text-transform: capitalize;
     font-size: 2em;
     font-weight: 500;
-    background-color: darkgoldenrod;
 }
-=======
+
+.containerSearched{
+    display: flex;
+    justify-content: center
+}
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro&display=swap');
 
 /* GLOBAL STYLES */
@@ -133,4 +148,3 @@ body {
 .weatherDescription{
     font-size: 1.2rem;
 }
->>>>>>> e4402e2457ce6cdc25193febc7a6be368a5c0c93
