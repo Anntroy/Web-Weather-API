@@ -1,0 +1,56 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+.containerHeader {
+    width: 100%;
+    height: 200px;
+    background-color: blue;
+}
+
+.containerCurrentTime {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.containerTemperature {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: burlywood;
+    padding: 20px 0px;
+}
+
+.containerLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-weight: 900;
+    background-color: cadetblue;
+}
+.containerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: coral;
+    font-size: 1.5em;
+}
+.containerCurrentTempUnit{
+    background-color: crimson;
+}
+.containerMaxMinTemp {
+    background-color: cyan;
+}
+.containerCity {
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: 500;
+    background-color: darkgoldenrod;
+}

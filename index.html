@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web & Weather API</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
@@ -23,10 +26,23 @@
             </article>
         </section>
         <section class="container containerMain">
+            <article class="containerCurrentTime">
+                <p class="currentWeekDay"></p>
+                <p class="currentDate"></p>
+                <p class="currentHour"></p>
+            </article>
             <article class="containerTemperature">
-                <div class="currentTemp">Current Temp</div>
-                <div class="maxMinTemp">
-
+                <div class="containerLeft">
+                    <p class="currentTempData">10</p>
+                </div>
+                <div class="containerRight">
+                    <div class="containerCurrentTempUnit">
+                        <p class="currentTempUnit">ºC</p>
+                    </div>
+                    <div class="containerMaxMinTemp">
+                        <p class="maxTemp">Max T</p>
+                        <p class="minTemp">Min T</p>
+                    </div>
                 </div>
             </article>
             <article class="containerCity">
@@ -39,9 +55,17 @@
         </section>
         <section class="searched">
             <label for="citySearch">City cityName</label>
-            <input type="text" id="citySearch">
+            <input type="text" id="citySearch" placeholder="Weather in your city...">
+            <button class="btn btn-search">Search</button>
+            <ul id="myCities">
+                <li></li>
+            </ul>
         </section>
     </main>
     <script src="js/main.js"></script>
+    <script src="js/citySearched.js"></script>
+    <script src="displayData.js"></script>
+    
+
 </body>
 </html>
