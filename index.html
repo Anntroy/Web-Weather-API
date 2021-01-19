@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web & Weather API</title>
     <link rel="stylesheet" href="main.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="reset.css">
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+=======
+    <link rel="stylesheet" href="css/pe-icon-7-weather/css/pe-icon-7-weather.css">
+>>>>>>> e4402e2457ce6cdc25193febc7a6be368a5c0c93
 </head>
 <body>
     <main>
         <section class="container containerHeader">
             <article class="containerHeaderCloudy">
-                <figure class="icon"></figure>
-                <p class="data"></p>
+                <figure class="icon"><i class="pe-7w-cloud pe-lg"></i></figure>
+                <p class="data" id="cloudyData"></p>
             </article>
             <article class="containerHeaderWindy">
-                <figure class="icon"></figure>
-                <p class="data"></p>
+                <figure class="icon"><i class="pe-7w-wind pe-lg"></i></figure>
+                <p class="data" id="windyData"></p>
             </article>
             <article class="containerHeaderHumidity">
-                <figure class="icon"></figure>
-                <p class="data"></p>
+                <figure class="icon"><i class="pe-7w-compass-north pe-lg"></i></figure>
+                <p class="data" id="humidityData"></p>
             </article>
         </section>
         <section class="container containerMain">
@@ -50,10 +54,10 @@
             </article>
         </section>
         <section class="container containerIcon">
-            <p class="iconDescription">icon Description</p>
-            <figure>icon</figure>
+            <p class="weatherDescription"></p>
+            <figure id="weatherIcon"></figure>
         </section>
-        <section class="searched">
+        <section class="container searched">
             <label for="citySearch">City cityName</label>
             <input type="text" id="citySearch" placeholder="Weather in your city...">
             <button class="btn btn-search">Search</button>
@@ -62,6 +66,7 @@
             </ul>
         </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/citySearched.js"></script>
     <script src="displayData.js"></script>
