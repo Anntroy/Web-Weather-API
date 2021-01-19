@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web & Weather API</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/pe-icon-7-weather/css/pe-icon-7-weather.css">
 </head>
 <body>
     <main>
         <section class="container containerHeader">
             <article class="containerHeaderCloudy">
-                <figure class="icon"></figure>
-                <p class="data"></p>
+                <figure class="icon"><i class="pe-7w-cloud pe-lg"></i></figure>
+                <p class="data" id="cloudyData"></p>
             </article>
             <article class="containerHeaderWindy">
-                <figure class="icon"></figure>
-                <p class="data"></p>
+                <figure class="icon"><i class="pe-7w-wind pe-lg"></i></figure>
+                <p class="data" id="windyData"></p>
             </article>
             <article class="containerHeaderHumidity">
-                <figure class="icon"></figure>
-                <p class="data"></p>
+                <figure class="icon"><i class="pe-7w-compass-north pe-lg"></i></figure>
+                <p class="data" id="humidityData"></p>
             </article>
         </section>
         <section class="container containerMain">
@@ -34,14 +35,15 @@
             </article>
         </section>
         <section class="container containerIcon">
-            <p class="iconDescription">icon Description</p>
-            <figure>icon</figure>
+            <p class="weatherDescription"></p>
+            <figure id="weatherIcon"></figure>
         </section>
-        <section class="searched">
+        <section class="container searched">
             <label for="citySearch">City cityName</label>
             <input type="text" id="citySearch">
         </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
