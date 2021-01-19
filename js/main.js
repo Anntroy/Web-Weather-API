@@ -1,6 +1,6 @@
 var form = new FormData();
 var settings = {
-    "url": "http://api.openweathermap.org/data/2.5/find?q=London&units=metric&appid=6e2d128b93c24dad81aa2c3bb912b429",
+    "url": link,
     "method": "GET",
     "timeout": 0,
     "processData": false,
