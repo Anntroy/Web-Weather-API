@@ -52,13 +52,13 @@ function displayData (cityName) {
             $(".cityName").text(response.name + ", " + response.sys.country);
             let weekDay = getWeekDay (response.dt);
             let date = getDate (response.dt);
-            let hour = getHour (response.dt);
+            let hour = getHour (response.dt, response.timezone);
             $(".currentWeekDay").text(weekDay)
             $(".currentDate").text(date);
             $(".currentHour").text(hour);
 
-            let sunriseTime = getHour(response.sys.sunrise);
-            let sunsetTime = getHour(response.sys.sunset);
+            let sunriseTime = getHour(response.sys.sunrise, response.timezone);
+            let sunsetTime = getHour(response.sys.sunset, response.timezone);
             $("#sunriseTime").text(sunriseTime);
             $("#sunsetTime").text(sunsetTime);
         }
@@ -114,10 +114,19 @@ function getDate (unix, timezone) {
         return myTime;
 } */
 
-function getHour (unix) {
-    var date = new Date(unix*1000);
-    var hour = date.getHours();
+function getHour (unix, timezone) {
+    var dateHour = new Date(unix*1000).toISOString();
+    var dateMinutes = new Date(unix*1000);
+    dateHour = new Date(dateHour);
+    var offset = timezone / 60 / 60;
+    dateHour.setHours(dateHour.getHours() + offset);
+    var hour = dateHour.getHours() - 1;
+    var minutes = dateMinutes.getMinutes();
+    console.log(minutes);
+    var time = hour + ":" + minutes;
+    return time;
+    /* var hour = date.getHours();
     var minute = date.getMinutes();
     var time = hour + ":" + minute
-    return time;
+    return time; */
 }

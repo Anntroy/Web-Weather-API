@@ -56,7 +56,7 @@ $.ajax(settings).done(function (response) {
                $("#myCities").css("display", "block")
                 for (let index = 0; index < response.data.length; index++) {
                    let cityFinded = $(`<li class="myCitiesFinded"></li>`);
-                   cityFinded.text(response.data[index].city);
+                   cityFinded.text(response.data[index].city + ", " + response.data[index].country);
                    cityFinded.data("latitude", response.data[index].latitude);
                    cityFinded.data("longitude", response.data[index].longitude);
                    $("#myCities").append(cityFinded);
