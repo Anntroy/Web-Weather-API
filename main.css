@@ -20,8 +20,18 @@ html, body {
     justify-content: center;
 }
 
+.icon {
+    font-size: 2em;
+}
+
+.sunTime {
+    margin-left: 5px;
+}
 .itemSunsetSunrise {
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .containerCurrentTime {

@@ -26,8 +26,6 @@ $("document").ready(function() {
                 let sunsetTime = getHour(response.sys.sunset);
                 $(".sunriseTime").text(sunriseTime);
                 $(".sunsetTime").text(sunsetTime);
-                $(".sunriseTime").prepend(`<span class="iconify" data-icon="wi-sunrise" data-inline="false">`);
-                $(".sunsetTime").prepend(`<span class="iconify" data-icon="wi-sunset" data-inline="false">`);
             }
             /* error : function(xhr, status) {
                 alert('Disculpe, existió un problema');

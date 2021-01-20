@@ -9,8 +9,10 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/pe-icon-7-weather/css/pe-icon-7-weather.css">
+    <link rel="stylesheet" href="css/pe-icon-7-weather/css/helper.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
 </head>
 <body class="body">
     <main>
@@ -35,8 +37,15 @@
                 <p class="currentHour"></p>
             </article>
             <article class="containerInfo containerSunsetSunrise">
-                <p class="itemSunsetSunrise sunriseTime"><span class="iconify" data-icon="wi-sunrise" data-inline="false"></span>08:32</p>
-                <p class="itemSunsetSunrise sunsetTime"><span class="iconify" data-icon="wi-sunset" data-inline="false"></span>18:32</p>
+                <div class="itemSunsetSunrise sunriseContainer">
+                    <i class="icon pe-7w-sunrise"></i>
+                    <p class="sunriseTime sunTime">08:32</p>
+                </div>
+                <div class="itemSunsetSunrise sunsetContainer">
+                    <i class="icon pe-7w-sunset"></i>
+                    <p class="sunsetTime sunTime">18:32</p>
+                </div>
+                
             </article>
             <article class="containerInfo containerTemperature">
                 <div class="containerLeft">
@@ -70,11 +79,10 @@
         </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/data.js"></script>
+    <script src="js/main.js"></script> -->
     <script src="js/citySearched.js"></script>
     <script src="displayData.js"></script>
-    
 
 </body>
 </html>
