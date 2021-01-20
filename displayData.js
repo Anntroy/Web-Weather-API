@@ -32,9 +32,41 @@ $("document").ready(function() {
             } */
         });
     }) //get city ID by searched menu
-    
 
 });
+
+function displayData (cityName) {
+    $.ajax({
+        url : 'http://api.openweathermap.org/data/2.5/weather',
+        data : {"q": cityName,"units":"metric","appid":"47eddf1ca8475b5d6bb078c9a3f5a4b5"},
+        type : 'GET',
+        dataType : 'json',
+        // success 
+        success : function(response) {
+            console.log(response)
+            $(".currentTempData").text(Math.round(response.main.temp));
+            $(".minTemp").text(Math.round(response.main.temp_min) + "º");
+            $(".minTemp").prepend(`<i class="fas fa-long-arrow-alt-down"></i>`)
+            $(".maxTemp").text(Math.round(response.main.temp_max) + "º");
+            $(".maxTemp").prepend(`<i class="fas fa-long-arrow-alt-up"></i>`)
+            $(".cityName").text(response.name + ", " + response.sys.country);
+            let weekDay = getWeekDay (response.dt);
+            let date = getDate (response.dt);
+            let hour = getHour (response.dt);
+            $(".currentWeekDay").text(weekDay)
+            $(".currentDate").text(date);
+            $(".currentHour").text(hour);
+
+            let sunriseTime = getHour(response.sys.sunrise);
+            let sunsetTime = getHour(response.sys.sunset);
+            $("#sunriseTime").text(sunriseTime);
+            $("#sunsetTime").text(sunsetTime);
+        }
+        /* error : function(xhr, status) {
+            alert('Disculpe, existió un problema');
+        } */
+    });
+}
 
 function getWeekDay (unix, timezone) {
     // Create a new JavaScript Date object based on the timestamp

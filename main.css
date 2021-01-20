@@ -184,10 +184,34 @@ html, body {
 
 .containerSearched{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
-
+.containerSearched div {
+    width: 80%;
+    height: max-content;
+    padding: 0px;
+}
+.containerSearched ul {
+    width: 68vw;
+    /* position: absolute;
+    height: 5vh; */
+    border-radius: 10px;
+    
+}
+.myCitiesFinded {
+    border: 3px solid transparent;
+    background: linear-gradient(360deg, #c5c9c9 20%, #f4f4f4 360%);
+    padding: 5px;
+}
+.myCitiesFinded:first-child {
+    border-radius: 10px 10px 0 0;
+}
+.myCitiesFinded:last-child {
+    border-radius: 0 0 10px 10px;
+}
 .citySearch {
     width: 68vw;
     height: 5vh;
