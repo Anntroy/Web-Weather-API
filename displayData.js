@@ -24,10 +24,8 @@ $("document").ready(function() {
 
                 let sunriseTime = getHour(response.sys.sunrise);
                 let sunsetTime = getHour(response.sys.sunset);
-                $(".sunriseTime").text(sunriseTime);
-                $(".sunsetTime").text(sunsetTime);
-                $(".sunriseTime").prepend(`<span class="iconify" data-icon="wi-sunrise" data-inline="false">`);
-                $(".sunsetTime").prepend(`<span class="iconify" data-icon="wi-sunset" data-inline="false">`);
+                $("#sunriseTime").text(sunriseTime);
+                $("#sunsetTime").text(sunsetTime);
             }
             /* error : function(xhr, status) {
                 alert('Disculpe, existió un problema');

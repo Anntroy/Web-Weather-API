@@ -28,42 +28,43 @@ $.ajax(settings).done(function (response) {
 function chooseWeatherIcon(icon){
     switch (icon) {
         case '01d':
-            $('#weatherIcon').addClass('pe-7w-sun');
+            $('#weatherIcon').addClass('pe-7w-sun').addClass('.weatherIcon');
             $('.body').css('background-image', "url('images/clear.jpg')");
             break;
         case '02d':
-            $('#weatherIcon').addClass('pe-7w-cloud-sun');
+            $('#weatherIcon').addClass('pe-7w-cloud-sun').addClass('.weatherIcon');
             $('.body').css('background-image', "url('images/few_clouds.jpg')");
             break;
         case '03d':
-            $('#weatherIcon').addClass('pe-7w-cloud');
+            $('#weatherIcon').addClass('pe-7w-cloud').addClass('.weatherIcon');
             $('.body').css('background-image', "url('images/cloudy.jpg')");
             break;
         case '04d':
-            $('#weatherIcon').addClass('pe-7w-cloud-wind');
+            $('#weatherIcon').prepend(`<i class="pe-7w-cloud-wind weatherIcon"></i>`);
             $('.body').css('background-image', "url('images/cloudy.jpg')");
             break;
         case '09d':
-            $('#weatherIcon').addClass('pe-7w-drizzle-alt');
+            $('#weatherIcon').prepend(`<i class="pe-7w-drizzle-alt weatherIcon"></i>`);
             $('.body').css('background-image', "url('images/rainy.jpg')");
             break;
         case '10d':
-            $('#weatherIcon').addClass('pe-7w-drizzle-alt-sun');
+            $('#weatherIcon').prepend(`<i class="pe-7w-drizzle-alt-sun weatherIcon"></i>`);
             $('.body').css('background-image', "url('images/rainy.jpg')");
         break;
         case '11d':
-            $('#weatherIcon').addClass('pe-7w-lightning');
+            $('#weatherIcon').prepend(`<i class="pe-7w-lightning weatherIcon"></i>`);
             $('.body').css('background-image', "url('images/storm.jpg')");
         break;
         case '13d':
-            $('#weatherIcon').addClass('pe-7w-snow-alt');
+            $('#weatherIcon').prepend(`<i class="pe-7w-snow-alt weatherIcon"></i>`);
             $('.body').css('background-image', "url('images/cloudy.jpg')");
         break;
         case '50d':
-            $('#weatherIcon').addClass('pe-7w-fog');
+            $('#weatherIcon').prepend(`<i class="pe-7w-fog weatherIcon"></i>`);
             $('.body').css('background-image', "url('images/cloudy.jpg')");
         break;
         default:
+            $('#weatherIcon').prepend(`<i class="pe-7w-cloud-sun weatherIcon"></i>`);
             $('.body').css('background-image', "url('images/clear.jpg')");
     }
 }

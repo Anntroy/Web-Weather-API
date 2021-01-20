@@ -16,27 +16,24 @@
     <main>
         <section class="container containerHeader">
             <article class="containerHeaderCloudy">
-                <figure class="icon"><i class="pe-7w-cloud pe-lg"></i></figure>
+                <figure class="icon"><i class="pe-7w-cloud pe-sm"></i></figure>
                 <p class="data" id="cloudyData"></p>
             </article>
             <article class="containerHeaderWindy">
-                <figure class="icon"><i class="pe-7w-wind pe-lg"></i></figure>
+                <figure class="icon"><i class="pe-7w-wind pe-sm"></i></figure>
                 <p class="data" id="windyData"></p>
             </article>
             <article class="containerHeaderHumidity">
-                <figure class="icon"><i class="pe-7w-compass-north pe-lg"></i></figure>
+                <figure class="icon"><i class="pe-7w-compass-north pe-sm"></i></figure>
                 <p class="data" id="humidityData"></p>
             </article>
         </section>
         <section class="container containerMain">
-            <article class="containerInfo containerCurrentTime">
-                <p class="currentWeekDay"></p>
-                <p class="currentDate"></p>
-                <p class="currentHour"></p>
-            </article>
             <article class="containerInfo containerSunsetSunrise">
-                <p class="itemSunsetSunrise sunriseTime"><span class="iconify" data-icon="wi-sunrise" data-inline="false"></span>08:32</p>
-                <p class="itemSunsetSunrise sunsetTime"><span class="iconify" data-icon="wi-sunset" data-inline="false"></span>18:32</p>
+                <figure class="icon"><i class="pe-7w-sunrise pe-sm"></i></figure>
+                <p class="data" id="sunriseTime">8:30</p>
+                <figure class="icon"><i class="pe-7w-sunset pe-sm"></i></figure>
+                <p class="data" id="sunsetTime">18:32</p>
             </article>
             <article class="containerInfo containerTemperature">
                 <div class="containerLeft">
@@ -47,23 +44,28 @@
                         <p class="currentTempUnit">ºC</p>
                     </div>
                     <div class="containerMaxMinTemp">
-                        <p class="maxTemp"><i class="fas fa-long-arrow-alt-up"></i>Max T</p>
-                        <p class="minTemp"><i class='fas fa-long-arrow-alt-down'></i>Min T</p>
+                        <p class="maxTemp">↥5ºC</p>
+                        <p class="minTemp">↧17ºC</p>
                     </div>
                 </div>
             </article>
             <article class="containerInfo containerCity">
-                <h2 class="cityName">City</h2>
+                <h2 class="cityName">London</h2>
+            </article>
+            <article class="containerInfo containerCurrentTime">
+                <p class="currentWeekDay">wednesday, 20 Jan, 10:12</p>
+                <p class="currentDate"></p>
+                <p class="currentHour"></p>
             </article>
         </section>
         <section class="container containerIcon">
-            <p class="weatherDescription"></p>
             <figure id="weatherIcon"></figure>
+            <p class="weatherDescription"></p>
         </section>
         <section class="containerSearched">
             <!-- <label for="citySearch">City cityName</label> -->
-            <input type="text" id="citySearch" placeholder="Weather in your city...">
-            <button class="btn btn-search"><i class='fas fa-search'></i></button>
+            <input type="text" id="citySearch" class="citySearch" placeholder="Weather in your city...">
+            <button class="btn-search"><i class='fas fa-search'></i></button>
             <!-- <ul id="myCities">
                 <li></li>
             </ul> -->
@@ -74,7 +76,5 @@
     <script src="js/main.js"></script>
     <script src="js/citySearched.js"></script>
     <script src="displayData.js"></script>
-    
-
 </body>
 </html>
