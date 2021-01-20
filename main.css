@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
-    color: var(--white);
+    color: var(--grey);
 }
 
 html {
@@ -35,9 +35,18 @@ html, body {
     background-color: #464646;
 }
 
+.main {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(98, 116, 81, 0.5);
+}
+
 .container {
     display: flex;
-    padding: 2.2em;
     justify-content: space-between;
 }
 
@@ -46,6 +55,8 @@ html, body {
 .containerHeader{
     width: 100vw;
     height: 6vh;
+    margin-bottom: 2em;
+    padding: 2rem;
 }
 
 .containerHeaderCloudy {
@@ -53,18 +64,6 @@ html, body {
     align-items: center;
 }
 
-.icon {
-    font-size: 2em;
-}
-
-.sunTime {
-    margin-left: 5px;
-}
-.itemSunsetSunrise {
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-}
 .containerHeaderWindy {
     display: flex;
     align-items: center;
@@ -81,6 +80,10 @@ html, body {
     text-shadow: 2px 2px 4px var(--black);
 }
 
+.containerHeaderSunsetSunrise {
+    display: none;
+}
+
 /* CLASS ICONS */
 .pe-sm {
     font-size: 1.6rem;
@@ -93,7 +96,7 @@ html, body {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
 }
 
 .containerSunsetSunrise {
@@ -117,9 +120,10 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     font-weight: 600;
     text-shadow: 2px 2px 4px var(--black);
+    margin-right: 0.2rem;
 }
 .containerRight {
     display: flex;
@@ -129,12 +133,12 @@ html, body {
 }
 .containerCurrentTempUnit{
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 1.6rem;
     text-shadow: 2px 2px 4px var(--black);
 }
 
 .containerMaxMinTemp {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     text-shadow: 2px 2px 4px var(--black);
     padding: 5px;
     margin-bottom: 5px;
@@ -161,13 +165,26 @@ html, body {
     letter-spacing: -0.8px;
 }
 
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.currentHour {
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}
+
 /* ICON CONTAINER AREA */
 
 .containerIcon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1.8rem;
+    margin-top: .4rem;
 }
 
 .weatherIcon {
@@ -175,26 +192,46 @@ html, body {
 }
 
 .weatherDescription{
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-shadow: 2px 2px 4px var(--black);
     letter-spacing: -0.8px;
 }
 
 /* SEARCH CONTAINER AREA */
 
-.containerSearched{
+.containerSearch{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 4.5rem;
     position: relative;
 }
-.containerSearched div {
+
+.citySearch {
+    width: 68vw;
+    height: 5vh;
+    line-height: 5vh;
+    border: 3px solid transparent;
+    background: linear-gradient(360deg, #c5c9c9 20%, #f4f4f4 360%);
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 4px var(--black);
+}
+
+.citySearch:focus {
+    border: 2px solid gray;
+    background: linear-gradient(360deg, #dee1e1 20%, #f4f4f4 360%);
+    outline: none;
+}
+
+.containerSearch div {
     width: 80%;
     height: max-content;
     padding: 0px;
 }
-.containerSearched ul {
+.containerSearch ul {
     width: 68vw;
     /* position: absolute;
     height: 5vh; */
@@ -212,24 +249,7 @@ html, body {
 .myCitiesFinded:last-child {
     border-radius: 0 0 10px 10px;
 }
-.citySearch {
-    width: 68vw;
-    height: 5vh;
-    line-height: 5vh;
-    border: 3px solid transparent;
-    background: linear-gradient(360deg, #c5c9c9 20%, #f4f4f4 360%);
-    border-radius: 10px;
-    padding: 5px 10px;
-    font-size: 1rem;
-    box-shadow: 2px 2px 4px var(--black);
-}
-
-.citySearch:focus {
-    border: 2px solid gray;
-    background: linear-gradient(360deg, #dee1e1 20%, #f4f4f4 360%);
-    outline: none;
-}
-
+/* 
 .btn-search {
     width: 5vh;
     height: 5vh;
@@ -240,4 +260,146 @@ html, body {
     cursor: pointer;
     outline: none;
     background-color: transparent;
+} */
+
+/* MEDIA QUERIES */
+@media (min-width: 500px) {
+    .containerHeader{
+        width: 40vw;
+        justify-content: flex-start;
+    }
+
+    .data {
+        font-size: 1rem;
+    }
+
+    .containerHeaderCloudy {
+        margin-right: 1.2rem;
+    }
+
+    .containerHeaderWindy {
+        margin-right: 1.2rem;
+    }
+    
+    .containerSunsetSunrise {
+        display: none;
+    }
+
+    .containerHeaderSunsetSunrise {
+        width: 40vw;
+        height: 6vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 2rem;
+    }
+
+    .pe-sm {
+        font-size: 2rem;
+    }
+    .ity {
+        margin-top: 1rem;
+    }
+
+    .containerTemperature {
+        margin-top: 2rem;
+    }
+
+    .currentTempUnit{
+        font-size: 1.8rem;
+    }
+
+    .containerMaxMinTemp{
+        font-size: 1.4rem;
+    }
+
+    .containerLeft {
+        font-size: 3.8rem;
+    }
+
+    .containerCity {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+        margin-top: 2.5rem;
+    }
+
+    .date {
+        font-size: 1.4rem;
+    }
+
+    .weatherIcon {
+        font-size: 4.5rem;
+    }
+
+    .citySearch {
+        width: 65vw;
+        height: 6vh;
+        margin-top: 4rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 750px) {
+
+    .containerIcon {
+        display: none;
+    }
+
+    .data {
+        font-size: 1.8rem;
+    }
+
+    .containerHeaderCloudy {
+        margin-right: 1.4rem;
+    }
+
+    .containerHeaderWindy {
+        margin-right: 1.4rem;
+    }
+
+    .pe-sm {
+        font-size: 2.2rem;
+    }
+
+    .currentTempUnit{
+        font-size: 2.4rem;
+    }
+
+    .containerMaxMinTemp{
+        font-size: 1.8rem;
+    }
+
+    .containerLeft {
+        font-size: 5.5rem;
+    }
+
+    .containerCity {
+        font-size: 3rem;
+    }
+
+    .date {
+        font-size: 1.8rem;
+    }
+
+    .currentHour {
+        font-size: 1.8rem;
+        margin-top: .8rem;
+    }
+
+    .weatherIcon {
+        font-size: 7rem;
+    }
+
+    .weatherDescription{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .citySearch {
+        width: 56vw;
+        height: 7vh;
+        margin-top: 5rem;
+    }
 }
