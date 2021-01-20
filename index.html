@@ -9,25 +9,30 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/pe-icon-7-weather/css/pe-icon-7-weather.css">
-    <link rel="stylesheet" href="css/pe-icon-7-weather/css/helper.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-
 </head>
 <body class="body">
-    <main>
-        <section class="container containerHeader">
-            <article class="containerHeaderCloudy">
-                <figure class="icon"><i class="pe-7w-cloud pe-sm"></i></figure>
-                <p class="data" id="cloudyData"></p>
-            </article>
-            <article class="containerHeaderWindy">
-                <figure class="icon"><i class="pe-7w-wind pe-sm"></i></figure>
-                <p class="data" id="windyData"></p>
-            </article>
-            <article class="containerHeaderHumidity">
-                <figure class="icon"><i class="pe-7w-compass-north pe-sm"></i></figure>
-                <p class="data" id="humidityData"></p>
+    <main class="main">
+        <section class="container">
+            <div class="container containerHeader">
+                <article class="containerHeaderCloudy">
+                    <figure class="icon"><i class="pe-7w-cloud pe-sm"></i></figure>
+                    <p class="data" id="cloudyData"></p>
+                </article>
+                <article class="containerHeaderWindy">
+                    <figure class="icon"><i class="pe-7w-wind pe-sm"></i></figure>
+                    <p class="data" id="windyData"></p>
+                </article>
+                <article class="containerHeaderHumidity">
+                    <figure class="icon"><i class="pe-7w-compass-north pe-sm"></i></figure>
+                    <p class="data" id="humidityData"></p>
+                </article>
+            </div>
+            <article class="containerHeaderSunsetSunrise">
+                <figure class="icon"><i class="pe-7w-sunrise pe-sm"></i></figure>
+                <p class="data sunriseTime">8:30</p>
+                <figure class="icon"><i class="pe-7w-sunset pe-sm"></i></figure>
+                <p class="data sunsetTime">18:32</p>
             </article>
         </section>
         <section class="container containerMain">
@@ -36,6 +41,16 @@
                 <p class="data" id="sunriseTime">8:30</p>
                 <figure class="icon"><i class="pe-7w-sunset pe-sm"></i></figure>
                 <p class="data" id="sunsetTime">18:32</p>
+            </article>
+            <article class="containerInfo containerCity">
+                <h2 class="cityName"></h2>
+            </article>
+            <article class="containerInfo containerCurrentTime">
+                <div class="date">
+                    <p class="currentWeekDay"></p>
+                    <p class="currentDate"></p>
+                </div>
+                <p class="currentHour"></p>
             </article>
             <article class="containerInfo containerTemperature">
                 <div class="containerLeft">
@@ -51,23 +66,14 @@
                     </div>
                 </div>
             </article>
-            <article class="containerInfo containerCity">
-                <h2 class="cityName">London</h2>
-            </article>
-            <article class="containerInfo containerCurrentTime">
-                <p class="currentWeekDay">wednesday, 20 Jan, 10:12</p>
-                <p class="currentDate"></p>
-                <p class="currentHour"></p>
-            </article>
         </section>
         <section class="container containerIcon">
-            <figure id="weatherIcon"></figure>
+            <i id="weatherIcon"></i>
             <p class="weatherDescription"></p>
         </section>
-        <section class="containerSearched">
+        <section class="containerSearch">
             <div>
                 <input type="text" id="citySearch" class="citySearch" placeholder="Weather in your city...">
-                <button class="btn-search"><i class='fas fa-search'></i></button>
             </div>
             <div>
                 <ul id="myCities">
@@ -76,7 +82,6 @@
         </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
     <script src="js/citySearched.js"></script>
     <script src="displayData.js"></script>
