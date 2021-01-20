@@ -24,8 +24,8 @@ $("document").ready(function() {
 
                 let sunriseTime = getHour(response.sys.sunrise);
                 let sunsetTime = getHour(response.sys.sunset);
-                $(".sunriseTime").text(sunriseTime);
-                $(".sunsetTime").text(sunsetTime);
+                $("#sunriseTime").text(sunriseTime);
+                $("#sunsetTime").text(sunsetTime);
             }
             /* error : function(xhr, status) {
                 alert('Disculpe, existió un problema');
