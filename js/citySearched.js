@@ -42,7 +42,7 @@ $.ajax(settings).done(function (response) {
          let namePrefix = $("#citySearch").val()
          $.ajax({
              url : 'https://wft-geo-db.p.rapidapi.com/v1/geo/cities',
-             data : {"namePrefix":namePrefix},
+             data : {"namePrefix":namePrefix, "limit":3},
              type : 'GET',
              dataType : 'json',
              headers: {
@@ -65,7 +65,7 @@ $.ajax(settings).done(function (response) {
                       let lon = cityFinded.data("longitude");
                       let lat = cityFinded.data("latitude");
                       $("#myCities").css("display", "none");
-                      displayData(cityFinded.text())
+                      getResponse(cityFinded.text());
                    })
 
                 }
