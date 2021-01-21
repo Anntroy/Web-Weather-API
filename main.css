@@ -210,7 +210,6 @@ html, body {
 
 .citySearch {
     width: 70vw;
-    /* line-height: 5vh; */
     border: 3px solid transparent;
     background: linear-gradient(360deg, #c5c9c9 20%, #f4f4f4 360%);
     border-radius: 10px;
@@ -220,7 +219,7 @@ html, body {
 }
 
 .citySearch:focus {
-    border: 2px solid gray;
+    border: 1px solid var(--grey);
     background: linear-gradient(360deg, #dee1e1 20%, #f4f4f4 360%);
     outline: none;
 }
@@ -321,14 +320,11 @@ html, body {
 
     .citySearch {
         width: 65vw;
-        /* height: 6vh; */
         margin-top: 4rem;
         font-size: 16px;
     }
     .containerSearch ul {
         width: 65vw;
-        /* position: absolute;
-        height: 5vh; */
     }
 }
 
@@ -392,7 +388,9 @@ html, body {
 
     .citySearch {
         width: 56vw;
-        height: 7vh;
         margin-top: 5rem;
+    }
+    .containerSearch ul {
+        width: 56vw;
     }
 }
