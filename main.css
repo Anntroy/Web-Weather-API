@@ -407,7 +407,11 @@ html, body {
 
     .citySearch {
         width: 56vw;
-        height: 7vh;
         margin-top: 5rem;
+    }
+    .containerSearch ul {
+        width: 56vw;
+        /* position: absolute;
+        height: 5vh; */
     }
 }
