@@ -55,7 +55,7 @@ html, body {
 .containerHeader{
     width: 100vw;
     height: 6vh;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     padding: 2rem;
 }
 
@@ -204,19 +204,18 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 4.5rem;
+    margin-top: 2rem;
     position: relative;
 }
 
 .citySearch {
-    width: 68vw;
-    height: 5vh;
-    line-height: 5vh;
+    width: 70vw;
+    /* line-height: 5vh; */
     border: 3px solid transparent;
     background: linear-gradient(360deg, #c5c9c9 20%, #f4f4f4 360%);
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 5px 10px;
-    font-size: 1rem;
+    font-size: 16px;
     box-shadow: 2px 2px 4px var(--black);
 }
 
@@ -232,7 +231,7 @@ html, body {
     padding: 0px;
 }
 .containerSearch ul {
-    width: 68vw;
+    width: 70vw;
     /* position: absolute;
     height: 5vh; */
     border-radius: 10px;
@@ -241,26 +240,15 @@ html, body {
 .myCitiesFinded {
     border: 3px solid transparent;
     background: linear-gradient(360deg, #c5c9c9 20%, #f4f4f4 360%);
-    padding: 5px;
+    padding: 5px 10px;
 }
 .myCitiesFinded:first-child {
     border-radius: 10px 10px 0 0;
 }
 .myCitiesFinded:last-child {
     border-radius: 0 0 10px 10px;
+    margin-bottom: 1rem;
 }
-/* 
-.btn-search {
-    width: 5vh;
-    height: 5vh;
-    font-size: 1rem;
-    text-shadow: 2px 2px 4px var(--black);
-    min-height: 44px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    background-color: transparent;
-} */
 
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
@@ -333,9 +321,14 @@ html, body {
 
     .citySearch {
         width: 65vw;
-        height: 6vh;
+        /* height: 6vh; */
         margin-top: 4rem;
-        font-size: 1.5rem;
+        font-size: 16px;
+    }
+    .containerSearch ul {
+        width: 65vw;
+        /* position: absolute;
+        height: 5vh; */
     }
 }
 
